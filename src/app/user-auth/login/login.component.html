@@ -1,0 +1,74 @@
+<p>login works!</p>
+<button (click)="getName(123,'Mahmud')"> Signup </button>
+<br> <br>
+<button (click)="getDate('Markhor')"> Let's warn</button>
+<br> <br>
+<input type="text" placeholder="enter your text here: " (keydown)="getDate('Key Down')">
+<br> <br>
+<input type="text" #box>
+<button (click)="getDate(box.value)"> Press Enter</button>
+<p>Box value is: {{displayVal}}</p>
+<br><br>
+<button (click)="getCount('')">--</button>
+<p> {{count}}</p>
+<button (click)="getCount('add')">++</button>
+<br> <br>
+
+<input type="text" name="user-name" value={{noty}} disabled={{disable}}>
+<input type="text" name="user-name" [value]=noty [disabled]=disable >
+
+<br> <br>
+<h1 *ngIf="show=='yes'; then ifBlock else elseBlock">
+</h1>
+
+<ng-template #ifBlock>
+    <h1> Here we have IF Block.</h1>
+</ng-template>
+
+<ng-template #elseBlock>
+    <h1>
+        Else Condition
+    </h1>
+</ng-template>
+
+<ng-template [ngIf]="color=='Green'">
+<h1 style="color: red">
+That's it
+</h1>
+</ng-template>
+
+<ng-template [ngIf]="color=='Blue'">
+<h1 style="color: blue">
+That's it
+</h1>
+</ng-template>
+
+<ng-template [ngIf]="color=='Yellow'">
+<h1 style="color: yellow">
+That's it
+</h1>
+</ng-template>
+
+<div [ngSwitch]="color">
+<h1 *ngSwitchCase="'green'" style="color: green;"> Green </h1>
+<h1 *ngSwitchCase="'blue'" style="color: blue;"> Blue </h1>
+<h1 *ngSwitchCase="'black'" style="color: black;"> Black </h1>
+<h1 *ngSwitchCase="'grey'" style="color: grey;"> Grey </h1>
+<h1 *ngSwitchCase="'orn'" style="color: darkorange;"> Orange </h1>
+<h1 *ngSwitchDefault> Unknown</h1>
+</div>
+
+<h3 *ngFor="let item of users">
+{{item}}
+</h3>
+
+<ul *ngFor="let item of userDetails">
+    <li>{{item.name}}{{item.email}}</li>
+    <ul *ngFor="let account of item.socialAccount">
+        <li> {{account}} </li>
+    </ul>
+</ul>
+
+<h1 [style.color]="color"> {{focus}}</h1>
+<h1 [style.color]="color" [style.backgroundColor]="bgColor"> Pakistan </h1>
+<button (click)="updateColor()">Update Color</button>
