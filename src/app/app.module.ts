@@ -11,8 +11,10 @@ import { MatSliderModule } from '@angular/material/slider';
 import { MatButtonModule } from '@angular/material/button';
 import { UserDetailsComponent } from './user-details/user-details.component';
 import { ChildComponent } from './child/child.component';
+import { PipesComponent } from './pipes/pipes.component';
+import { UspkrPipe } from './pipe/uspkr.pipe';
 @NgModule({
-  declarations: [AppComponent, HeaderComponent, UserDetailsComponent, ChildComponent],
+  declarations: [AppComponent, HeaderComponent, UserDetailsComponent, ChildComponent, PipesComponent, UspkrPipe],
   imports: [
     BrowserModule,
     AppRoutingModule,
