@@ -9,8 +9,10 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatSliderModule } from '@angular/material/slider';
 import { MatButtonModule } from '@angular/material/button';
+import { UserDetailsComponent } from './user-details/user-details.component';
+import { ChildComponent } from './child/child.component';
 @NgModule({
-  declarations: [AppComponent, HeaderComponent],
+  declarations: [AppComponent, HeaderComponent, UserDetailsComponent, ChildComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,

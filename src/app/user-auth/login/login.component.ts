@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-login',
@@ -69,6 +69,8 @@ export class LoginComponent implements OnInit {
     this.color = 'blue';
     this.bgColor = 'grey';
   }
+
+  @Input() item = 10;
 
   ngOnInit(): void {}
 }

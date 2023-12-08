@@ -1,0 +1,8 @@
+<p>child works!</p>
+<input type="text" #box>
+<button (click)="updateDataEvent.emit(box.value)"> Update Data  </button>
+
+<br><br>
+<input type="text" [(ngModel)]="name">
+
+<h3> {{name}}</h3>

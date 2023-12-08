@@ -1,5 +1,20 @@
 <app-header></app-header>
+<app-login [item]= "data"></app-login>
+<button (click)="upChild()"> Lets Update Child Component </button>
+<br><br> 
+<ul *ngFor="let user of userDetails">
+  <app-user-details [item]="user"> </app-user-details>
+</ul>
+<br><br>
+<h1> {{ crot }}</h1>
+<br><br>
+<app-child (updateDataEvent)="updateData($event)"></app-child>
 
+
+<br><br>
+<input type="text" #box2>
+
+<button (click)="getVal(box2.value)"> Call Function</button>
 <mat-slider min="1" max="100" step="1" value="1" > Welcome </mat-slider>
 <form #basicForm="ngForm" (ngSubmit)="getData(basicForm.value)">
   <br><br>
@@ -39,8 +54,6 @@
 <span class="badge bg-light text-dark">Light</span>
 <span class="badge bg-dark">Dark</span>
 <app-login></app-login>
-
-<mat-slider min="1" max="100" step="1" value="1" ></mat-slider>
 
 <div class="example-label">Raised</div>
   <div class="example-button-row">
